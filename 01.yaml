@@ -8,4 +8,4 @@
       state: "{{ item.state }}"
     loop:
     - { name: 'git', state: 'present' }
-    - { name: 'mysql', state: 'present' }
+    - { name: 'mysql', state: 'absent' }
