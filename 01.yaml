@@ -1,11 +1,8 @@
-- name: install packages
+- name: install mysql
   hosts: web
   become: yes
   tasks:
-  - name: install packages
-    ansible.builtin.package:
-      name: "{{ item.name }}"
-      state: "{{ item.state }}"
-    loop:
-    - { name: 'git', state: 'absent' }
-    - { name: 'mysql', state: 'absent' }
+  - name: install mysql server
+    ansible.built.in.package:
+      name: mysql-server
+      state: installed
